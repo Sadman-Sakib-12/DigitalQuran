@@ -1,6 +1,8 @@
 import { fetchAllSurahs } from "@/lib/quran";
 import SurahGrid from "@/components/SurahGrid";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const surahs = await fetchAllSurahs();
   return (

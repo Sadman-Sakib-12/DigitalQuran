@@ -1,6 +1,6 @@
 import SearchResults from "@/components/SearchResults";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export default function SearchPage() {
   return (

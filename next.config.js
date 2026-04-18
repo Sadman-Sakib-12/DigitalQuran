@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  // SSR mode — needed for MongoDB
-};
+const nextConfig = {};
 
 module.exports = nextConfig;

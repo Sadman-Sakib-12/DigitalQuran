@@ -1,11 +1,7 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI!;
-
-if (!MONGODB_URI) throw new Error("Please define MONGODB_URI in .env.local");
-
-// Cache connection to avoid reconnecting on every request
-const globalWithMongoose = global as any; // eslint-disable-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const globalWithMongoose = global as any;
 if (!globalWithMongoose._mongoCache) {
   globalWithMongoose._mongoCache = { conn: null, promise: null };
 }
@@ -16,6 +12,9 @@ const cache = globalWithMongoose._mongoCache as {
 };
 
 export async function connectDB(): Promise<typeof mongoose> {
+  const MONGODB_URI = process.env.MONGODB_URI;
+  if (!MONGODB_URI) throw new Error("MONGODB_URI is not defined");
+
   if (cache.conn) return cache.conn;
 
   if (!cache.promise) {
@@ -27,8 +26,14 @@ export async function connectDB(): Promise<typeof mongoose> {
         connectTimeoutMS: 30000,
         maxPoolSize: 10,
       })
-      .then((m) => { console.log("✅ MongoDB connected"); return m; })
-      .catch((err) => { cache.promise = null; throw err; });
+      .then((m) => {
+        console.log("✅ MongoDB connected");
+        return m;
+      })
+      .catch((err) => {
+        cache.promise = null;
+        throw err;
+      });
   }
 
   cache.conn = await cache.promise;
