@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const globalWithMongoose = global as any;
 if (!globalWithMongoose._mongoCache) {
   globalWithMongoose._mongoCache = { conn: null, promise: null };
