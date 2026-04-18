@@ -8,7 +8,7 @@ A full-featured Quran web application built with Next.js, Tailwind CSS, and Mong
 
 ## Live Demo
 
-🔗 [Live Demo](https://your-vercel-url.vercel.app)
+🔗 [Live Demo](https://quran-app-lilac-eight.vercel.app)
 
 ---
 
