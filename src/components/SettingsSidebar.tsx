@@ -84,7 +84,6 @@ export default function SettingsSidebar() {
               <span>12px</span><span>24px</span>
             </div>
           </div>
-
           {/* Preview */}
           <div className="rounded-lg border border-slate-600 bg-slate-900/50 p-4">
             <p className="text-xs text-slate-500 mb-3">Preview</p>

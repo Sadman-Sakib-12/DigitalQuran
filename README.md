@@ -1,5 +1,7 @@
 # Digital Quran — Web Application
 
+  <div><img src="https://i.ibb.co.com/xSZLFZZ9/Annotation-2026-04-19-031444.jpg" alt="" /></div>
+
 A full-featured Quran web application built with Next.js, Tailwind CSS, and MongoDB Atlas.
 
 ---
@@ -7,10 +9,6 @@ A full-featured Quran web application built with Next.js, Tailwind CSS, and Mong
 ## Live Demo
 
 🔗 [Live Demo](https://your-vercel-url.vercel.app)
-
-## GitHub Repository
-
-🔗 [GitHub Repo](https://github.com/your-username/quran-app)
 
 ---
 
